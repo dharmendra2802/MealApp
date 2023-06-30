@@ -1,0 +1,21 @@
+@import url('/css/section/header.css');
+@import url('/css/section/maincontent.css');
+@import url('/css/section/infoMeal.css');
+
+/* removing the default  */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root
+{
+    --primary-color :#FFA500;
+    --secondary-color:  #fff;
+    --accent: #3CB371;
+    --text: #333;
+    --action: #dc143c;
+}
+

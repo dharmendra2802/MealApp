@@ -1,0 +1,95 @@
+
+/* working on main content */
+.meal-cont
+{
+    width: 100vw;
+    height: calc(100vh-50px);
+    padding: 20px;
+}
+
+
+/* meal container upper */
+.meal-cont-basic
+{
+    padding: 25px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    overflow: hidden;
+}
+
+/* img */
+.meal-cont-basic__picture
+{
+    width: 300px;
+    height: 300px;
+    min-width: 150px;
+    min-height: 150px;
+    background-image: url('/assets/Bombay-biryani.jpg'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 8px 2px rgba(110, 110, 110, 0.5);
+}
+
+
+/* info */
+.meal-cont-basic-info
+{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.meal-cont-basic-info h1
+{
+    font-size: 55px;
+    letter-spacing: 5px;
+}
+
+.meal-cont-basic-info__tag span
+{
+    border: 1px solid rgba(78, 75, 75, 0.4);
+    padding: 2px ;
+    font-size: 12px;
+    font-weight: 300;
+    color:  rgba(1, 1, 1, .8);
+}
+
+/* links list menu content */
+.meal-cont-basic-info__linkList
+{
+    padding: 15px;
+    margin-top: 5px;
+}
+.meal-cont-basic-info__linkList h2
+{
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.meal-cont-basic-info__linkList li , a
+{
+    list-style: none;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+/* button */
+.meal-cont-basic_favBttn
+{
+    width: 150px;
+    font-size: 20px;
+    padding: 2px 5px;
+    background-color: var(--accent);
+    color: black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-self: center;
+    box-shadow: 0px 0px 8px 2px rgba(124, 176, 148, 0.5);
+}

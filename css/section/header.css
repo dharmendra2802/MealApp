@@ -1,0 +1,47 @@
+
+/* navbar */
+.navbar
+{
+    width: 100vw;
+    height: 50px;
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-logo
+{
+    display: inherit;
+    flex: 1;
+}
+.navbar-logo img
+{
+    width: 28px;
+    height: 28px;
+}
+.navbar-logo h1{
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+.navbar-menu
+{
+    flex: 2;
+}
+.navbar-menu .navbar-menu-list
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;   
+}
+.navbar-menu .navbar-menu-list .navbar-menu-list__item
+{
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: var(--text);
+    font-size: 400;
+}
