@@ -4,33 +4,60 @@
     function () {
         const urlParams = new URLSearchParams(window.location.search);
         console.log(urlParams.get('search'))
+
         // calling the function to fetch data
         fetchDishData(urlParams.get('search'));
+        
     }
 )();
 
 // importing favorite array
-import { favoriteDish } from '../js/script.js';
+import { getFavorites,setFavorites,removeFavorities,saveFavorite} from '../js/favorite.js';
+
 // to store id
 let ID ;
+
 // working on adding and removing buttton 
 const favBttn = document.getElementById('addFavorite');
+
 favBttn.addEventListener('click',()=>{
-     
-    if(favoriteDish.includes(ID))
+    console.log(getFavorites());
+
+    const holder = getFavorites();
+    if( ! holder.includes(ID))
+    {
+        setFavorites(ID);
+    }
+    else
+    {
+        removeFavorities(ID);
+    }
+    checkFavStatus(ID);
+})
+
+// to save the data in local Storage
+window.addEventListener('beforeunload', () => {
+    saveFavorite();
+})
+
+// to check if it is favorite or 
+function checkFavStatus(id)
+{
+    const holder = getFavorites();
+    if( ! holder.includes(ID))
     {
         favBttn.innerHTML = 'Add to Favorite';
-        favoriteDish.add(ID);
     }
     else
     {
         favBttn.innerHTML = 'Favorite Dish';
-        const index = favoriteDish.indexOf(ID);
-        if(index!==-1)
-            favoriteDish.splice(index,1);
     }
+   
+}
 
-})
+
+
+
 
 
 
@@ -45,6 +72,9 @@ function fetchDishData(dishName) {
         .then(data => {
             console.log(data);
             fillFetchedData(data.meals);
+            console.log(getFavorites());
+
+            checkFavStatus(ID);
             return data;
         })
         .catch(error => { 

@@ -5,21 +5,6 @@ const searchBtn = document.getElementById('searchbttn'); // Corrected variable n
 
 // to store fetched data
 
-let favoriteDish;
-
-if(localStorage.getItem('favoriteDish'))
-{
-    favoriteDish = [];
-}else
-{
-   favoriteDish =  JSON.parse(localStorage.getItem('favoriteDish'));
-
-}
-// Save favoriteDish array to Local Storage before the page unloads
-window.addEventListener('beforeunload', () => {
-    localStorage.setItem('favoriteDish', JSON.stringify(favoriteDish));
-});
-
 searchBtn.addEventListener('click', async function() {
     const searchValue = searchBar.value;
     
@@ -29,4 +14,3 @@ searchBtn.addEventListener('click', async function() {
 
 
 });
-
