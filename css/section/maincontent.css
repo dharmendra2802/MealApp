@@ -19,13 +19,13 @@
 }
 
 /* img */
-.meal-cont-basic__picture
+#meal-cont-basic__picture
 {
     width: 300px;
     height: 300px;
     min-width: 150px;
     min-height: 150px;
-    background-image: url('/assets/Bombay-biryani.jpg'); /* Replace with the actual image path */
+    background-image: url(); /* Replace with the actual image path */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

@@ -16,7 +16,7 @@
     width: 65%;
 }
 
-.meal-cont-ingre-matrialBox , .meal-cont-instruct-instructBox 
+#meal-cont-ingre-matrialBox , .meal-cont-instruct-instructBox 
 {
     padding: 10px;
     display: flex;
@@ -34,7 +34,7 @@
 }
 
 /* spans */
-.ingre-name,.ingre-quantity
+.ingre
 {
     background-color: #3CB371;
     flex: 1;
@@ -50,5 +50,6 @@
 {
     font-size: 18px;
     word-spacing: 2px;
-    
+    white-space: pre-line;
+
 }

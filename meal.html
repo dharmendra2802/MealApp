@@ -28,59 +28,44 @@
     <main class="meal-cont">
         <div class="meal-cont-basic">
 
-            <div class="meal-cont-basic__picture"></div>
+            <div id="meal-cont-basic__picture"></div>
 
             <div class="meal-cont-basic-info">
-                <h1>Biryani</h1>
+                <h1 id="dishName"></h1>
 
                 <div class="meal-cont-basic-info__tag">
-                    <span>Indian</span>
-                    <span>Chicken</span>
+                    <span id="areaName"></span>
+                    <span id="categoryName"></span>
                 </div>
 
                 <div class="meal-cont-basic-info__linkList">
                     <h2>Lets Cook</h2>
                     <ul>
                         <li><a href="#ingredients">Ingredients</a></li>
-                        <li><a href="#recipe">Instructions</a></li>
-                        <li><a href="#">Read more</a></li>
-                        <li><a href="#">Video Tutorial</a></li>
+                        <li><a href="#instruction">Instructions</a></li>
+                        <li><a href="#" id="sourceLink" target='_blank'>Read more</a></li>
+                        <li><a href="#" id="videoLink" target='_blank'>Video Tutorial</a></li>
                     </ul>
                 </div>
 
-                <button class="meal-cont-basic_favBttn">Add to Favorite</button>
+                <button class="meal-cont-basic_favBttn" id="addFavorite">Add to Favorite</button>
 
             </div>
         </div>
 
-        <div class="meal-cont-ingre" name="ingredients">
+        <div class="meal-cont-ingre" id="ingredients">
             <h3>Ingredients Required</h3>
 
-            <div class="meal-cont-ingre-matrialBox">
-                <div class="meal-cont-ingre__matrial">
-                    <span class="ingre-name">Onion</span>
-                    <span class="ingre-quantity">6 lrge</span>
-                </div>
-                <div class="meal-cont-ingre__matrial">
-                    <span class="ingre-name">Onion</span>
-                    <span class="ingre-quantity">6 lrge</span>
-                </div><div class="meal-cont-ingre__matrial">
-                    <span class="ingre-name">Onion</span>
-                    <span class="ingre-quantity">6 lrge</span>
-                </div><div class="meal-cont-ingre__matrial">
-                    <span class="ingre-name">Onion</span>
-                    <span class="ingre-quantity">6 lrge</span>
-                </div><div class="meal-cont-ingre__matrial">
-                    <span class="ingre-name">Onion</span>
-                    <span class="ingre-quantity">6 lrge</span>
-                </div>
+            <div id="meal-cont-ingre-matrialBox">
             </div>
         </div>
 
-        <div class="meal-cont-instruct" name="instruction">
+        <div class="meal-cont-instruct" id="instruction">
             <h3>Instructions</h3>
             <div class="meal-cont-instruct-instructBox">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eaque eligendi rem quaerat repudiandae impedit sed, ratione quidem quas placeat cumque facere distinctio veritatis asperiores accusantium qui voluptates? Consectetur, veniam?</p>
+                <p id="instructionAdd">
+
+                </p>
             </div>
         </div>
     </main>
@@ -90,5 +75,5 @@
 
 
 </body>
-<script src="js/script.js"></script>
+<script  src="js/mealscript.js"></script>
 </html>
