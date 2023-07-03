@@ -1,3 +1,8 @@
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins&family=Roboto+Mono&family=Ysabeau+Infant:ital@1&display=swap');
+
+/* sections */
 @import url('/css/section/header.css');
 @import url('/css/section/maincontent.css');
 @import url('/css/section/infoMeal.css');
@@ -18,8 +23,17 @@
     --accent: #3CB371;
     --text: #333;
     --action: #dc143c;
+    --logoFont : 'Caveat', cursive;
+    --headFont: 'Poppins', sans-serif;
+    --subheadFont : 'Roboto Mono', monospace;
+    --paraFont: 'Ysabeau Infant', sans-serif;
 }
 
+body
+{
+    width: 100vw;
+    height: calc(100vh - 50px);
+}
 
 /* styling main ppage */
 #main-page-cont
@@ -28,19 +42,38 @@
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: calc(80vh);
+    height: calc(100vh - 50px);
+    z-index: 1;
+    margin: 0px;
 }
+
+#main-page-cont::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh);
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(55%);
+    z-index: -1;
+  }
+
 
 #search-cont
 {
-    border: 1px solid red;
-    border-radius: 8px;
+    z-index: 2;
     width: 50%;
     height: 50px;
     position: relative;
-    display: inherit;
+    display: inherit;    
+    border-radius: 8px;
+    box-shadow: 0 0 8px 4px rgba(204, 122, 0, 0.3); /* Subtle box shadow */
 }
 
+/* to hold input bar and suggestion box */
 #searhbar-cont
 {
     flex: 1;
@@ -51,39 +84,70 @@
 #searchbar
 {
     border: none;
+    border-radius: 8px 0px 0px 8px;
     font-size: 24px;
-    padding: 2px 5px;
+    padding: 5px 8px;
     letter-spacing: 2px;
     height: 100%;
     width: 100%;
     outline: none;
-    border-radius: 8px;
+    font-family: var(--subheadFont);
+    color: var(--text);
 }
 
 #searchbar-sugg-cont
 {
-    border: 1px solid red;
+    border: none;
+    margin-top: 5px;
     max-height: 200px;
-    overflow-y: auto;
+    overflow-y: auto ;
+    padding: 4px 10px 4px;
 }
+
+/* scrollbar */
+/* For WebKit based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb { 
+    background: rgba(255, 166, 0, 0.867);
+    border-radius: 20px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+  
 
 .searchbar-sugg-item 
 {
     margin-bottom: 2px;
     font-size: 16px;
+    font-family: var(--paraFont);
     letter-spacing: 2px;
-    padding: 2px 5px;
+    padding:  5px;
+    border-radius: 5px;
+    
     background-color: aliceblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
+.searchbar-sugg-item:hover
+{
+    background-color: #FFBE40;
+}
+
 
 .liked-icon{
     width: 15px;
     height: 15px;
-    cursor: pointer;
 }
 
 
@@ -94,8 +158,11 @@
     height: 100%;
     font-size: 22px;
     letter-spacing: 2px;
-    padding: 5px;
+    padding: 5px 8px;
     cursor: pointer;
     border: none;
-    border-radius: 8px;
+    border-radius: 0px 8px 8px 0px;
+    font-family: var(--headFont);
+    background-color: var(--accent);
+    color: var(--text);
 }
