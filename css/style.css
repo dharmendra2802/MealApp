@@ -20,3 +20,82 @@
     --action: #dc143c;
 }
 
+
+/* styling main ppage */
+#main-page-cont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(80vh);
+}
+
+#search-cont
+{
+    border: 1px solid red;
+    border-radius: 8px;
+    width: 50%;
+    height: 50px;
+    position: relative;
+    display: inherit;
+}
+
+#searhbar-cont
+{
+    flex: 1;
+    width: 80%;
+    position: relative;
+}
+
+#searchbar
+{
+    border: none;
+    font-size: 24px;
+    padding: 2px 5px;
+    letter-spacing: 2px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+}
+
+#searchbar-sugg-cont
+{
+    border: 1px solid red;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.searchbar-sugg-item 
+{
+    margin-bottom: 2px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 2px 5px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.liked-icon{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+
+/* search button */
+#searchbttn
+{
+    width: 100px;
+    height: 100%;
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+}
