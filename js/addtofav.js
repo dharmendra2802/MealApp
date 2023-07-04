@@ -1,14 +1,13 @@
+// to load the favorite dish data as soon as page is reloaded
 (async function() {
 
     const favData = getFavorites();
     const parent = document.getElementById('favoriteCont');
   
     if (favData) {
-      for (const data of favData) {
-        console.log(data);
+      for (const data of favData) {    
         const dish = await fetchById(data);
         // Rest of the code to create and append the elements
-        console.log(dish.meals[0].strMeal);
 
         const son = document.createElement('div');
         son.classList.add('favCard');
@@ -31,6 +30,11 @@
   
         // Inserting the cards into the main container
         parent.appendChild(son);
+
+        // adding event to each card so we can fetch that dish on click
+        son.addEventListener('click',()=>{
+          getTheDish(htag.innerHTML);
+        });
       }
     }
   
@@ -47,5 +51,12 @@
     } catch (error) {
       console.log("Error in fetching the data by ID");
     }
-  }
+}
   
+// to fetch that particular dish
+function getTheDish(dish)
+{
+    // search on clicking button 
+    window.open(`meal.html?search=${encodeURIComponent(dish)}`, '_self');
+
+}

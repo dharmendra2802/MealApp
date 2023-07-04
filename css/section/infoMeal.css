@@ -1,5 +1,6 @@
 /* working on ingredient /  instructions*/
 
+
 .meal-cont-ingre , .meal-cont-instuct
 {
     padding: 10px;
@@ -8,7 +9,8 @@
 
 .meal-cont-ingre h3 , .meal-cont-instruct h3
 {
-    font-size: 24px;
+    font-size: 26px;
+    font-family: var(--subheadFont);
     padding-left: 5px;
     letter-spacing: 4px;
     padding-bottom: 5px;
@@ -41,7 +43,7 @@
     padding: 5px 0px;
     text-align: center;
     font-size: 18px;
-
+    font-family: var(--paraFont);
 }
 
 
@@ -51,5 +53,6 @@
     font-size: 18px;
     word-spacing: 2px;
     white-space: pre-line;
+    font-family: var(--paraFont);
 
 }

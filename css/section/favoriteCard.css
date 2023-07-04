@@ -1,36 +1,64 @@
 /* working card */
 
+
+
+#fav-cont
+{
+    padding: 20px 20px 5px;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    z-index: 1;
+}
+
+
+#fav-cont::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh);
+    background-image: url('../../assets/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
 #heading
 {
-    height: 50px;
-    font-size: 26px;
-    padding: 0px 0px 5px 5px;
     letter-spacing: 2px;
-    margin: 20px 10px ;
-    display: flex;
-    align-items: flex-end;
+    font-family: var(--logoFont);
+    font-size: 48px;
+    margin: 10px 0px 20px;
+    color: var(--secondary-color);
 }
 
 #favoriteCont
 {
-    width: 100vw;
-    height: calc(100vh-35px);
-    padding: 25px;
+    padding: 10px;
     display: flex;
+    height: 100%;
+    overflow: auto;
     flex-direction: row;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
+    align-content: center;
 }
 
 .favCard
 {
-    width: 250px;
-    height: 250px;
-    min-width: 150px;
-    min-height: 150px;
+    width: 220px;
+    height: 220px;
     position: relative;
     box-shadow: 0px 0px 5px 2px rgba(48, 42, 42, 0.4);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .favCard__img
@@ -38,40 +66,42 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    filter: brightness(100%);
 }
 
 .favCard-info
 {
     position: absolute;
-    background: linear-gradient(to top, rgba(48, 39, 39, 0.9) 0%, rgba(48, 39, 39, 0.5) 50%, rgba(48, 39, 39, 0) 100%);
     width: 100%;
-    height: 50px;
+    height: 70px;
     bottom: 0px;
     padding-bottom: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: .5s ease-in;
+    align-items: flex-end;
+    transition: .7s ease-in;
+    background: linear-gradient(to top, rgba(48, 39, 39, 0.9) 20%, rgba(48, 39, 39, 0.5) 60%, rgba(48, 39, 39, 0) 100%);
 }
 
 .favCard-info_h4
 {
-    font-size: 30px;
+    font-size: 18px;
     letter-spacing: 2px;
+    font-family: var(--subheadFont);
     /* cursor: pointer; */
-    color: white;
-    font-size: 500;
-    transition: .5s ease-in;
+    color: whitesmoke;
+    transition: .7s ease-in;
     text-align: center;
 
 }
 
-.favCard-info:hover 
+.favCard:hover .favCard-info
 {
     height: 100%;
+    background: linear-gradient(to top, rgba(48, 39, 39, 0.9) 10%, rgba(48, 39, 39, 0.5) 50%, rgba(48, 39, 39, 0) 100%);
 }
-.favCard-info:hover h4
+
+.favCard:hover .favCard-info_h4
 {
-    font-size: 35px;
+    font-size: 22px;
 }
