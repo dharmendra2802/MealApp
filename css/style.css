@@ -24,7 +24,7 @@
     --text: #333;
     --action: #dc143c;
     --logoFont : 'Caveat', cursive;
-    --headFont: 'Poppins', sans-serif;
+    --headFont: 'Mukta', sans-serif;
     --subheadFont : 'Roboto Mono', monospace;
     --paraFont: 'Ysabeau Infant', sans-serif;
 }
@@ -165,4 +165,13 @@ body
     font-family: var(--headFont);
     background-color: var(--accent);
     color: var(--text);
+}
+
+
+@media(max-width:570px)
+{
+    #main-page-cont
+    {
+        height: calc(100vh - 200px);
+    }
 }

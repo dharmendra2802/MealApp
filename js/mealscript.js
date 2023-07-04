@@ -19,7 +19,6 @@ let ID ;
 
 // working on adding and removing buttton 
 const favBttn = document.getElementById('addFavorite');
-
 favBttn.addEventListener('click',()=>{
     console.log(getFavorites());
 
@@ -44,33 +43,35 @@ window.addEventListener('beforeunload', () => {
 function checkFavStatus(id)
 {
     const holder = getFavorites();
+    console.log("cjeckk")
     if( ! holder.includes(ID))
     {
-        favBttn.innerHTML = 'Add to Favorite';
+        favBttn.style.backgroundImage = "url('../../assets/heart.png')";
     }
     else
     {
-        favBttn.innerHTML = 'Favorite Dish';
+        favBttn.style.backgroundImage = "url('../../assets/filled.png')";
     }
    
 }
 
 
 
-
-
-
-
-
-
-
-
 // function to fetch data
 function fetchDishData(dishName) {
-    return fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`) // Added "https://" in the URL
+
+    let URL;
+    if(dishName === 'random')
+    {
+        URL = "https://www.themealdb.com/api/json/v1/1/random.php";
+    }
+    else
+    {
+        URL = `https://www.themealdb.com/api/json/v1/1/search.php?s=${dishName}`;
+    }
+    return fetch(URL) // Added "https://" in the URL
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             fillFetchedData(data.meals);
             console.log(getFavorites());
 
@@ -136,4 +137,13 @@ function fillFetchedData(data)
         }
     }
     
+}
+
+
+// random disg function
+document.getElementById('surprise').addEventListener('click',randomDish);
+function randomDish()
+{
+    console.log("sssssss");
+    window.open(`meal.html?search=${encodeURIComponent("random")}`, '_self');
 }

@@ -16,6 +16,7 @@
     padding-bottom: 5px;
     border-bottom: 2px solid var(--text);
     width: 65%;
+    margin: 15px 0px;
 }
 
 #meal-cont-ingre-matrialBox , .meal-cont-instruct-instructBox 
@@ -40,19 +41,20 @@
 {
     background-color: #3CB371;
     flex: 1;
+    border-radius: 5px;
     padding: 5px 0px;
     text-align: center;
-    font-size: 18px;
-    font-family: var(--paraFont);
+    font-size: 20px;
+    font-family: var(--subheadFont);
 }
 
 
 /* instruction */
 .meal-cont-instruct-instructBox p
 {
-    font-size: 18px;
+    font-size: 20px;
     word-spacing: 2px;
     white-space: pre-line;
     font-family: var(--paraFont);
-
 }
+

@@ -105,3 +105,13 @@
 {
     font-size: 22px;
 }
+
+
+
+@media(max-width:570px)
+{
+    #fav-cont
+    {
+        height: calc(100vh - 110px);
+    }
+}

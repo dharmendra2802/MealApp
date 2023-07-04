@@ -30,7 +30,7 @@
 }
 .navbar-menu
 {
-    flex: 2;
+    flex: 1;
 }
 .navbar-menu .navbar-menu-list 
 {
@@ -55,8 +55,22 @@
 a 
 {
     font-family: var(--headFont);
-    font-size: 16px;
+    font-size: 18px !important;
     letter-spacing: 2px;
     cursor: pointer;
     color: var(--text);
+}
+
+@media(max-width:570px)
+{
+    .navbar-logo
+    {
+        flex: 0;
+    }
+    .navbar
+    {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+    }
 }
