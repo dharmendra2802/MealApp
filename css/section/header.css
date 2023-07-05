@@ -26,7 +26,8 @@
     letter-spacing: 4px;
     margin-left: 10px;
     font-family: var(--logoFont);
-    font-size: 28px;
+    font-size: 24px;
+    color: var(--text);
 }
 .navbar-menu
 {
@@ -52,10 +53,11 @@
 {
     background-color: #FFBE40;
 }
-a 
+.nav_link
 {
     font-family: var(--headFont);
-    font-size: 18px !important;
+    text-decoration: none;
+    font-size: 22px !important;
     letter-spacing: 2px;
     cursor: pointer;
     color: var(--text);

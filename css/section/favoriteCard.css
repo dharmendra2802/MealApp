@@ -7,6 +7,8 @@
     padding: 20px 20px 5px;
     width: 100vw;
     height: calc(100vh - 50px);
+    background-color: #CFF0D6;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +16,7 @@
     margin: 0;
     z-index: 1;
 }
-
+/* 
 
 #fav-cont::before {
     content: "";
@@ -26,17 +28,18 @@
     background-image: url('../../assets/bg2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(50%);
+    filter: brightness(70%);
     z-index: -1;
-}
+} */
 
 #heading
 {
     letter-spacing: 2px;
-    font-family: var(--logoFont);
-    font-size: 48px;
+    font-family: var(--headFont);
+    font-weight: 600;
+    font-size: 36px;
     margin: 10px 0px 20px;
-    color: var(--secondary-color);
+    color: var(--text);
 }
 
 #favoriteCont
@@ -66,7 +69,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: brightness(100%);
+    filter: brightness(80%);
 }
 
 .favCard-info
@@ -78,7 +81,7 @@
     padding-bottom: 10px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     transition: .7s ease-in;
     background: linear-gradient(to top, rgba(48, 39, 39, 0.9) 20%, rgba(48, 39, 39, 0.5) 60%, rgba(48, 39, 39, 0) 100%);
 }
@@ -87,10 +90,11 @@
 {
     font-size: 18px;
     letter-spacing: 2px;
-    font-family: var(--subheadFont);
+    font-family: var(--headFont);
+    font-weight: 600;
     /* cursor: pointer; */
     color: whitesmoke;
-    transition: .7s ease-in;
+    transition: .4s ease-in;
     text-align: center;
 
 }
@@ -98,13 +102,18 @@
 .favCard:hover .favCard-info
 {
     height: 100%;
-    background: linear-gradient(to top, rgba(48, 39, 39, 0.9) 10%, rgba(48, 39, 39, 0.5) 50%, rgba(48, 39, 39, 0) 100%);
+    /* background: linear-gradient(to top, rgba(48, 39, 39, 0.9) 10%, rgba(48, 39, 39, 0.5) 50%, rgba(48, 39, 39, 0) 100%); */
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
+    border-radius: 10px;
 }
-
+/* 
 .favCard:hover .favCard-info_h4
 {
-    font-size: 22px;
-}
+    font-size: 20px;
+} */
 
 
 

@@ -9,8 +9,8 @@
 
 .meal-cont-ingre h3 , .meal-cont-instruct h3
 {
-    font-size: 26px;
-    font-family: var(--subheadFont);
+    font-size: 28px;
+    font-family: var(--headFont);
     padding-left: 5px;
     letter-spacing: 4px;
     padding-bottom: 5px;
@@ -44,8 +44,9 @@
     border-radius: 5px;
     padding: 5px 0px;
     text-align: center;
-    font-size: 20px;
-    font-family: var(--subheadFont);
+    font-weight: 600;
+    font-size: 18px;
+    font-family: var(--subheadFont) ;
 }
 
 
@@ -53,6 +54,7 @@
 .meal-cont-instruct-instructBox p
 {
     font-size: 20px;
+    font-weight: 600;
     word-spacing: 2px;
     white-space: pre-line;
     font-family: var(--paraFont);
