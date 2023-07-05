@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@400;600&family=Open+Sans&display=swap');
 
 /* sections */
-@import url('./css/section/header.css');
-@import url('./css/section/maincontent.css');
-@import url('./css/section/infoMeal.css');
-@import url('./css/section/favoriteCard.css');
+@import url('/css/section/header.css');
+@import url('/css/section/maincontent.css');
+@import url('/css/section/infoMeal.css');
+@import url('/css/section/favoriteCard.css');
 
 /* removing the default  */
 *{

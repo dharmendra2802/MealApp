@@ -38,6 +38,5 @@ export function removeFavorities(d)
 document.getElementById('surprise').addEventListener('click',randomDish);
 function randomDish()
 {
-    console.log("sssssss");
     window.open(`meal.html?search=${encodeURIComponent("random")}`, '_self');
 }
