@@ -44,11 +44,11 @@ function checkFavStatus(id)
     
     if( ! holder.includes(ID))
     {
-        favBttn.style.backgroundImage = "url('../../assets/heart.png')";
+        favBttn.style.backgroundImage = `url('../../assets/heart.png')`;
     }
     else
     {
-        favBttn.style.backgroundImage = "url('../../assets/filled.png')";
+        favBttn.style.backgroundImage = `url('../../assets/filled.png')`;
     }
    
 }
