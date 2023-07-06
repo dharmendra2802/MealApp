@@ -23,7 +23,12 @@
         htag.innerHTML = `${dish.meals[0].strMeal}`;
         htag.classList.add('favCard-info_h4');
   
+        const remove = document.createElement('div');
+        remove.classList.add('remove-fav');
+        remove.innerHTML = "Remove";
+
         divOne.appendChild(htag);
+        divOne.appendChild(remove);
   
         son.appendChild(img);
         son.appendChild(divOne);
@@ -31,6 +36,11 @@
         // Inserting the cards into the main container
         parent.appendChild(son);
 
+        // remove function
+        remove.addEventListener('click',()=>{
+          event.stopPropagation(); 
+          removeFromFav(dish.meals[0].idMeal);
+        })
         // adding event to each card so we can fetch that dish on click
         son.addEventListener('click',()=>{
           getTheDish(htag.innerHTML);
@@ -40,8 +50,9 @@
   
   })();
   
-  import { getFavorites } from '../js/favorite.js';
-  
+// importing favorite array
+import { getFavorites,setFavorites,removeFavorities,saveFavorite} from '../js/favorite.js';
+
   // Fetch by ID
   async function fetchById(id) {
     try {
@@ -60,3 +71,17 @@ function getTheDish(dish)
     window.open(`meal.html?search=${encodeURIComponent(dish)}`, '_self');
 
 }
+
+// to remove this from fav list
+function removeFromFav(id)
+{
+  removeFavorities(id);
+  location.reload();
+}
+
+
+// to save the data in local Storage
+window.addEventListener('beforeunload', () => {
+  saveFavorite();
+
+})
