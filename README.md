@@ -4,8 +4,8 @@
 RecipeFinder is a web application that allows users to search for recipes, discover new dishes, and save their favorite recipes for future reference. 
 The application leverages the MealDB API to fetch recipe data and provides an intuitive user interface for an enhanced recipe browsing experience.
 
--- RepoLink:
--- HostedLink:
+-- RepoLink: https://github.com/dharmendra2802/MealApp/tree/main
+-- HostedLink: https://dharmendra2802.github.io/MealApp/index.html
 -- Video: https://drive.google.com/file/d/1ATCe3GyCIc9TnUCBRGbepJuLKg2KPQFG/view?usp=sharing
 
 ## Features
