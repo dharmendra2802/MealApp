@@ -80,10 +80,33 @@
     bottom: 0px;
     padding-bottom: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     transition: .7s ease-in;
     background: linear-gradient(to top, rgba(48, 39, 39, 0.9) 20%, rgba(48, 39, 39, 0.5) 60%, rgba(48, 39, 39, 0) 100%);
+}
+
+
+/* remove div */
+.remove-fav
+{
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 2px 8px;
+    transition: .7s ease-in;
+    height: 0px;
+    font-size: 0px;
+    width: 80px;
+    color: transparent;
+    /* display: inherit; */
+    text-align: center;
+    font-family: var(--subheadFont);
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 15px;
 }
 
 .favCard-info_h4
@@ -98,14 +121,25 @@
     text-align: center;
 
 }
+.remove-fav:hover
+{
+    background-color: var(--action);
+}
 
+.favCard:hover .remove-fav
+{
+
+    font-size: 16px;
+    height: 20px;
+    color: var(--text);
+}
 .favCard:hover .favCard-info
 {
     height: 100%;
     /* background: linear-gradient(to top, rgba(48, 39, 39, 0.9) 10%, rgba(48, 39, 39, 0.5) 50%, rgba(48, 39, 39, 0) 100%); */
     background: rgba( 255, 255, 255, 0.1 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 1px );
+    backdrop-filter: blur( 2px );
     -webkit-backdrop-filter: blur( 1px );
     border-radius: 10px;
 }
@@ -114,7 +148,6 @@
 {
     font-size: 20px;
 } */
-
 
 
 @media(max-width:570px)
